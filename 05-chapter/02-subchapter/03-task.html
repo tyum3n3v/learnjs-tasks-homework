@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subchapter 2</title>
+  <script src="03-task.js"></script>
+</head>
+<body>
+    <div>
+      <pre>
+        function readNumber() {
+          let number;
+          let flag = false;
+        
+          while( !flag ) {
+            number = prompt("Введите число");
+            if (number === null || number === "") {
+              flag = true;
+              return null;
+            };
+            if (isFinite(number)) {
+              flag = true;
+              return +number;
+            }
+          }
+        }
+        
+        alert(`${readNumber()}`)
+      </pre>
+    </div>
+</body>
+</html>

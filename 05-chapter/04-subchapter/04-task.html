@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subchapter 4</title>
+  <script src="04-task.js"></script>
+</head>
+<body>
+    <div>
+      <pre>
+        function sumInput() {
+            let result = [];
+            let flag = true;
+          
+            while (flag) {
+              let input = prompt('Введите число', 0);
+              if (input === "" || input === null || !isFinite(input)) {
+                flag = false;
+              } else {
+                result.push(+input);
+              }
+            }
+          
+            let output = result.reduce((a, b) => a + b);
+        }
+      </pre>
+    </div>
+</body>
+</html>

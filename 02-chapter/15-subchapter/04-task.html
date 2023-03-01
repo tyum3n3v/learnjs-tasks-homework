@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subchapter 15</title>
+  <script src="04-task.js"></script>
+</head>
+<body>
+    <div>
+        <h3>Функция pow(x,n)</h3>
+        <p>Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.</p>
+        <pre>
+          pow(3, 2) = 3 * 3 = 9
+          pow(3, 3) = 3 * 3 * 3 = 27
+          pow(1, 100) = 1 * 1 * ...* 1 = 1
+        </pre>
+        <p>Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).</p>
+        <p>Result:</p>
+        <pre>
+            function pow(x, n) {
+                let result = x;
+              
+                for (let expCounter = 1; expCounter < n; expCounter++) {
+                  result *= x;
+                }
+                return result;
+            }
+                
+            let x = prompt("Какое число Вы хотите возвести в степень: x?", "");
+            let n = prompt("В какую степень Вы хотите возвевести число x: n?", "");
+            
+            if(n < 1) {
+                alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+            } else {
+                alert(pow(x, n));
+            }
+        </pre>
+      </div>
+</body>
+</html>

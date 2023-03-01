@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subchapter 11</title>
+  <script src="09-task.js"></script>
+</head>
+<body>
+    <div>
+      <pre>
+        let currentUserName = prompt("Ваш логин?", "");
+        let notification = new String();
+
+        if(currentUserName === ADMIN_USERNAME) {
+            let password = prompt("Ваш пароль?");
+            notification = (password === ADMIN_PASSWORD) ? ADMIN_GREETING : 
+                (password === "" || password === null) ? CANCELED : WRONG_PASSWORD;
+        } else if(currentUserName === "" || currentUserName === null) {
+            notification = CANCELED;
+        } else {
+            notification = UNKNOWN_USER;
+        }
+        alert(notification);
+      </pre>
+    </div>
+</body>
+</html>
